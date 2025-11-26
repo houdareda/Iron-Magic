@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Magic</title>
+
+    <link rel="icon" href="img/White.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="hdr-main-header">
+        <div class="hdr-container">
+            <div class="hdr-logo-container">
+                <img src="img/White.png" alt="Iron Magic" class="hdr-logo">
+            </div>
+        </div>
+    </header>
+
+    <section class="ba-section">
+        <div class="ba-container" id="beforeAfterContainer">
+            <div class="ba-wrapper">
+                <div class="ba-image-container">
+                    <img src="img/before before W.png" alt="قبل" class="ba-before-image" draggable="false">
+                    <img src="img/after after W.png" alt="بعد" class="ba-after-image" draggable="false">
+                </div>
+                <div class="ba-overlay-layer"></div>
+                <div class="ba-slider-handle" id="sliderHandle">
+                    <div class="ba-slider-line"></div>
+                    <div class="ba-slider-arrow ba-slider-arrow-left">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <div class="ba-slider-arrow ba-slider-arrow-right">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="prod-section">
+        <div class="prod-container">
+            <!-- المنتج الواحد -->
+            <div class="prod-card prod-one-product">
+                <div class="prod-image">
+                    <img class="prod-img-1" src="img/product.png" alt="Iron Magic" draggable="false">
+                    <img class="prod-img-2" src="img/product3.png" alt="Iron Magic" draggable="false">
+                    <img class="prod-img-3" src="img/product2.png" alt="Iron Magic" draggable="false">
+                </div>
+                <div class="prod-info">
+                    <h3 class="prod-title">Iron Magic</h3>
+                    <div class="prod-price">
+                        <span class="prod-current-price">LE 270.00</span>
+                        <span class="prod-currency">EGP</span>
+                    </div>
+                    <a href="#" class="prod-add-to-cart-btn">اطلب الان</a>
+                </div>
+            </div>
+
+            <!-- عرض 2 bottles -->
+            <div class="prod-card prod-bundle-card">
+                <div class="prod-badge">العرض الأفضل</div>
+                <div class="prod-image">
+                    <img src="img/Bundle 2.png" alt="Iron Magic COMPO 2 BOTTLES" draggable="false">
+                </div>
+                <div class="prod-info">
+                    <h3 class="prod-title">عرض عبوتين من  Iron Magic</h3>
+                    <div class="prod-price">
+                        <span class="prod-old-price">LE 540.00</span>
+                        <span class="prod-current-price">LE 430.00</span>
+                    </div>
+                    <a href="#" class="prod-add-to-cart-btn">اطلب الان</a>
+                </div>
+            </div>
+
+            <!-- عرض 3 bottles -->
+            <div class="prod-card prod-bundle-card">
+                <div class="prod-badge">وفر 180 جنيه</div>
+                <div class="prod-image">
+                    <img src="img/Bundle 3.png" alt="Iron Magic BUNDLE 3 BOTTLES" draggable="false">
+                </div>
+                <div class="prod-info">
+                    <h3 class="prod-title">عرض ٣ عبوات من  Iron Magic</h3>
+                    <div class="prod-price">
+                        <span class="prod-old-price">LE 810.00</span>
+                        <span class="prod-current-price">LE 630.00</span>
+                    </div>
+                        <a href="#" class="prod-add-to-cart-btn">اطلب الان</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="faq-section">
+        <div class="faq-container">
+            <h2 class="faq-title">أسئلة شائعة</h2>
+            
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-text">هل ايرون ماجيك أمن على جميع أنواع الأقمشة ؟</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <span class="faq-a">ج -</span>
+                            <span>طبعاً. تركيبة ايرون ماجيك مصممة بمواد صديقة للأقمشة وآمنة على أغلب أنواع الملابس. بس للأمان التام، بننصح دايماً بتجربته على جزء صغير مخفي من الملابس الأول لضمان التوافق</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-text">هل ممكن يسبب أي تلف أو بقع للملابس ؟</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <span class="faq-a">ج -</span>
+                            <span>لأ إطلاقاً. المنتج مصمم عشان يفرد وينعش الهدوم من غير أي ضرر. بيشيل الكرمشة برفق وبدون أي مواد كيميائية قاسية أو حرارة مكواة</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-text">بياخد وقت قد إيه عشان ينشف ؟</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <span class="faq-a">ج -</span>
+                            <span>بينشف في ثواني ! ايرون ماجيك سريع الجفاف جداً، بمجرد ما ترش وتشد القماش، هينشف فوراً وتقدر تلبس وتنزل علطول من غير انتظار</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-text">هل آمن إني أستخدمه بشكل يومي ؟</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <span class="faq-a">ج -</span>
+                            <span>أكيد. مكوناته آمنة ولطيفة جداً على الأنسجة، فتقدر تستخدمه بشكل متكرر عشان تحافظ على شياكة هدومك طول الوقت</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span class="faq-text">ازاي بيقدر ايرون ماجيك على فرد الأقمشة الصعبة ؟</span>
+                        <span class="faq-icon">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        <div class="faq-answer-content">
+                            <span class="faq-a">ج -</span>
+                            <span>بيشتغل ايرون ماجيك بتكنولوجيا <strong>Fabric Relaxing Mist</strong> - مواد بتفك تعقيدات الخيوط وبتفرد الثنيات فورًا بدون حرارة</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -183,6 +183,9 @@ img{
     gap: 20px;
 }
 
+.prod-one-product .prod-add-to-cart-btn{
+    font-size: 5vw;
+}
 .prod-card {
     position: relative;
     display: flex;
@@ -195,6 +198,52 @@ img{
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+}
+
+.prod-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.prod-card.selected {
+    border-color: #FFD700;
+    box-shadow: 0 8px 35px rgba(255, 215, 0, 0.4), 0 0 0 3px rgba(255, 215, 0, 0.2);
+    transform: translateY(-5px) scale(1.02);
+    background: linear-gradient(90deg, rgba(107, 151, 217, 0.95) 10%, rgba(123, 44, 191, 0.95) 100%);
+}
+
+.prod-card.selected::before {
+    content: "✓";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(135deg, #FFD700 0%, #FF7F50 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 100;
+    box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+    animation: checkmarkAppear 0.3s ease;
+}
+
+@keyframes checkmarkAppear {
+    0% {
+        transform: scale(0) rotate(-180deg);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+    }
 }
 
 .prod-bundle-card {
@@ -219,7 +268,7 @@ img{
 }
 
 .prod-bundle-card .prod-title {
-    font-size: 4.2vw;
+    font-size: 3.5vw;
     line-height: 1.5;
     width: 100%;
 }
@@ -379,7 +428,7 @@ img{
 }
 
 .prod-currency {
-    font-size: 16px;
+    font-size: 3.5vw;
     opacity: 0.9;
 }
 

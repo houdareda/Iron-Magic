@@ -135,6 +135,27 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
+// Product Selection (Radio Button Style)
+document.addEventListener('DOMContentLoaded', function() {
+    const productCards = document.querySelectorAll('.prod-card');
+    
+    productCards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // منع الانتقال عند الضغط على زر "اطلب الان"
+            if (e.target.classList.contains('prod-add-to-cart-btn') || 
+                e.target.closest('.prod-add-to-cart-btn')) {
+                return;
+            }
+            
+            // إزالة التحديد من جميع المنتجات
+            productCards.forEach(c => c.classList.remove('selected'));
+            
+            // إضافة التحديد للمنتج المختار
+            this.classList.add('selected');
+        });
+    });
+});
+
 // FAQ Toggle Function
 function toggleFaq(element) {
     const faqItem = element.parentElement;

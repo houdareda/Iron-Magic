@@ -221,7 +221,8 @@ header{
 }
 
 .prod-one-product .prod-add-to-cart-btn{
-    font-size: 5vw;
+    font-size: 4.5vw;
+    padding: 4px 25px 6px;
 }
 .prod-one-product{
     position: relative;

@@ -158,9 +158,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const subtotal = productPrices[productCount] || 275;
         const total = subtotal + shippingPrice;
         
-        if (subtotalEl) subtotalEl.textContent = `EGP ${subtotal.toFixed(2)}`;
-        if (shippingEl) shippingEl.textContent = `EGP ${shippingPrice.toFixed(2)}`;
-        if (totalEl) totalEl.textContent = `EGP ${total.toFixed(2)}`;
+        if (subtotalEl) subtotalEl.textContent = `${subtotal.toFixed(2)} جنيه `;
+        if (shippingEl) shippingEl.textContent = `${shippingPrice.toFixed(2)} جنيه`;
+        if (totalEl) totalEl.textContent = `${total.toFixed(2)} جنيه`;
     }
     
     // دالة لاختيار المنتج وتحديث القيمة

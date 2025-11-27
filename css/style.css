@@ -228,10 +228,10 @@ header{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 10px;
     background: linear-gradient(90deg, rgba(107, 151, 217, 1) 10%, rgba(123, 44, 191, 1) 100%);
     border-radius: 20px;
-    padding: 20px;
+    padding:10px 20px 15px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     text-align: center;
@@ -313,14 +313,14 @@ header{
     flex-direction: row-reverse;
     direction: ltr;
     text-align: right;
-    padding: 15px;
+    padding: 5px 15px;
     gap: 10px;
 }
 
 .prod-bundle-card .prod-image {
     order: 1;
-    flex: 0 0 120px;
-    height: 150px;
+    flex: 0 0 100px;
+    height: 100px;
 }
 
 .prod-bundle-card .prod-info {
@@ -341,11 +341,11 @@ header{
 }
 
 .prod-bundle-card .prod-current-price {
-    font-size: 5.4vw;
+    font-size: 4vw;
 }
 
 .prod-bundle-card .prod-add-to-cart-btn {
-    padding: 4px 25px;
+    padding: 2px 25px 3px;
     font-size: 4.2vw;
     align-self: flex-start;
 }
@@ -458,7 +458,7 @@ header{
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 5px;
     color: white;
     align-items: center;
 }

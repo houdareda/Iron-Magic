@@ -139,6 +139,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     const productCards = document.querySelectorAll('.prod-card');
     const productCountInput = document.getElementById('product_count');
+    const orderSummary = document.querySelector('.order-summary');
     
     // أسعار المنتجات
     const productPrices = {
@@ -187,6 +188,10 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.target.closest('.prod-add-to-cart-btn')) {
                 e.preventDefault();
                 selectProduct(this);
+                // إظهار ملخص الطلب بعد اختيار منتج
+                if (orderSummary) {
+                    orderSummary.style.display = 'block';
+                }
                 // الانتقال للأسفل بعد اختيار المنتج
                 setTimeout(() => {
                     const formSection = document.getElementById('submit-now');
@@ -199,13 +204,14 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // اختيار المنتج عند الضغط على الكارد
             selectProduct(this);
+            // إظهار ملخص الطلب بعد اختيار منتج
+            if (orderSummary) {
+                orderSummary.style.display = 'block';
+            }
         });
     });
     
-    // اختيار المنتج الأول افتراضياً
-    if (productCards.length > 0 && productCountInput) {
-        selectProduct(productCards[0]);
-    }
+    // نقدر نخلي اختيار أول منتج داخلي بس من غير ما نظهر الملخص أو نعتمد على كليك اليوزر فقط
 });
 
 // FAQ Toggle Function

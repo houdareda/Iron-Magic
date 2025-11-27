@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iron Magic</title>
+    <title>Iron Magic – سبراي لفرد كرمشة الهدوم بدون مكواة</title>
+
+    <meta name="description" content="سبراي Iron Magic الألماني لفرد الكرمشة في ثواني بدون مكواة. رش، شد، والبس فوراً – مناسب لمعظم أنواع الأقمشة مع عروض خاصة على العبوات المتعددة وتوصيل حتى باب البيت.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph for better previews on social media -->
+    <meta property="og:locale" content="ar_AR">
+    <meta property="og:type" content="product">
+    <meta property="og:title" content="Iron Magic – سبراي لفرد كرمشة الهدوم بدون مكواة">
+    <meta property="og:description" content="ودّع المكواة مع سبراي Iron Magic لفرد الكرمشة بسرعة وبدون مجهود مع عروض على عبوة و٢ و٣ عبوات.">
+    <meta property="og:image" content="img/product.png">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Iron Magic – سبراي لفرد كرمشة الهدوم بدون مكواة">
+    <meta name="twitter:description" content="رش، شد، والبس فوراً مع سبراي Iron Magic لفرد الكرمشة بدون مكواة وعروض قوية على العبوات.">
+    <meta name="twitter:image" content="img/product.png">
 
     <link rel="icon" href="img/White.png" type="image/x-icon">
 
@@ -45,8 +61,8 @@
 
     <section class="prod-section">
         <div class="prod-container">
-            <!-- المنتج الواحد -->
-            <div class="prod-card prod-one-product" data-product-count="1">
+            <!-- كرت تعريفي عن المنتج (مش داخل في نظام الطلب) -->
+            <div class="prod-one-product">
                 <div class="prod-image">
                     <img class="prod-img-1" src="img/product.png" alt="Iron Magic" draggable="false">
                     <img class="prod-img-2" src="img/product3.png" alt="Iron Magic" draggable="false">
@@ -54,9 +70,62 @@
                 </div>
                 <div class="prod-info">
                     <h3 class="prod-title">Iron Magic</h3>
-                    <div class="prod-price">
+                    <div class="prod-price prod-intro-text">
                         <span class="prod-currency">افرد هدومك في ثواني 
                             مع التركيبة السحرية الالمانية</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="how_us">
+        <div class="how_us_container">
+            <div class="step step1">
+                <div class="step_img">
+                    <img src="img/step1.png" alt="Iron Magic" draggable="false">
+                </div>
+                <div class="step_text">
+                    <h3 class="step_title">رُش</h3>
+                    <p class="step_description">وجه البخاخ على الكرمشة ورش بوفرة</p>
+                </div>
+            </div>
+            <div class="step step2">
+                <div class="step_img">
+                    <img src="img/step2.jpg" alt="Iron Magic" draggable="false">
+                </div>
+                <div class="step_text">
+                    <h3 class="step_title">شِد</h3>
+                    <p class="step_description">شد بإيدك لفرد القماش</p>
+                </div>
+            </div>
+
+            <div class="step step3">
+                <div class="step_img">
+                    <img src="img/step3.png" alt="Iron Magic" draggable="false">
+                </div>
+                <div class="step_text">
+                    <h3 class="step_title">انت جاهز</h3>
+                    <p class="step_description">استنى ثواني ينشف
+                        والبس</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <section class="prod-section">
+        <div class="prod-container">
+            <!-- عرض عبوة واحدة (منتج يدخل في الفنكشن بتاعة الطلب) -->
+            <div class="prod-card prod-bundle-card" data-product-count="1">
+
+                <div class="prod-image">
+                    <img src="img/product.png" alt="Iron Magic 1 Bottle" draggable="false">
+                </div>
+                <div class="prod-info">
+                    <h3 class="prod-title">عبوة واحدة من Iron Magic</h3>
+                    <div class="prod-price">
+                        <span class="prod-current-price">LE 275.00</span>
                     </div>
                     <a href="#submit-now" class="prod-add-to-cart-btn">اطلب الان</a>
                 </div>
@@ -95,7 +164,6 @@
             </div>
         </div>
     </section>
-
 
     
     <section class="form_section" id="submit-now">
@@ -225,8 +293,8 @@
                 </svg>
               </div>
 
-            <!-- ملخص الطلب -->
-            <div class="order-summary">
+            <!-- ملخص الطلب (مخفي لحد ما اليوزر يختار منتج) -->
+            <div class="order-summary" style="display: none;">
               <div class="summary-row">
                 <span class="summary-label">المجموع الفرعي:</span>
                 <span class="summary-value" id="subtotal">EGP 275.00</span>

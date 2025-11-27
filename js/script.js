@@ -138,22 +138,74 @@ document.addEventListener('DOMContentLoaded', function() {
 // Product Selection (Radio Button Style)
 document.addEventListener('DOMContentLoaded', function() {
     const productCards = document.querySelectorAll('.prod-card');
+    const productCountInput = document.getElementById('product_count');
     
+    // أسعار المنتجات
+    const productPrices = {
+        1: 275,  // المنتج الواحد
+        2: 430,  // عرض 2 bottles
+        3: 630   // عرض 3 bottles
+    };
+    const shippingPrice = 54; // سعر الشحن الثابت
+    
+    // دالة لتحديث الملخص المالي
+    function updateOrderSummary(productCount) {
+        const subtotalEl = document.getElementById('subtotal');
+        const shippingEl = document.getElementById('shipping');
+        const totalEl = document.getElementById('total');
+        
+        const subtotal = productPrices[productCount] || 275;
+        const total = subtotal + shippingPrice;
+        
+        if (subtotalEl) subtotalEl.textContent = `EGP ${subtotal.toFixed(2)}`;
+        if (shippingEl) shippingEl.textContent = `EGP ${shippingPrice.toFixed(2)}`;
+        if (totalEl) totalEl.textContent = `EGP ${total.toFixed(2)}`;
+    }
+    
+    // دالة لاختيار المنتج وتحديث القيمة
+    function selectProduct(card) {
+        // إزالة التحديد من جميع المنتجات
+        productCards.forEach(c => c.classList.remove('selected'));
+        
+        // إضافة التحديد للمنتج المختار
+        card.classList.add('selected');
+        
+        // تحديث قيمة product_count
+        const productCount = card.getAttribute('data-product-count');
+        if (productCountInput && productCount) {
+            productCountInput.value = productCount;
+            // تحديث الملخص المالي
+            updateOrderSummary(parseInt(productCount));
+        }
+    }
+    
+    // إضافة event listener للكاردات
     productCards.forEach(card => {
         card.addEventListener('click', function(e) {
-            // منع الانتقال عند الضغط على زر "اطلب الان"
+            // إذا كان الضغط على زر "اطلب الان"، نختار المنتج أولاً ثم ننتقل
             if (e.target.classList.contains('prod-add-to-cart-btn') || 
                 e.target.closest('.prod-add-to-cart-btn')) {
+                e.preventDefault();
+                selectProduct(this);
+                // الانتقال للأسفل بعد اختيار المنتج
+                setTimeout(() => {
+                    const formSection = document.getElementById('submit-now');
+                    if (formSection) {
+                        formSection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100);
                 return;
             }
             
-            // إزالة التحديد من جميع المنتجات
-            productCards.forEach(c => c.classList.remove('selected'));
-            
-            // إضافة التحديد للمنتج المختار
-            this.classList.add('selected');
+            // اختيار المنتج عند الضغط على الكارد
+            selectProduct(this);
         });
     });
+    
+    // اختيار المنتج الأول افتراضياً
+    if (productCards.length > 0 && productCountInput) {
+        selectProduct(productCards[0]);
+    }
 });
 
 // FAQ Toggle Function
